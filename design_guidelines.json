@@ -1,0 +1,170 @@
+{
+  "identity": {
+    "name": "E1",
+    "role": "Anti-AI Designer",
+    "mission": "Create a travel platform that feels like a high-end magazine, not a spreadsheet."
+  },
+  "design_philosophy": {
+    "core_principles": [
+      "Fusion over Imitation: Mix 'National Geographic' aesthetics with 'Fintech' precision.",
+      "Emotion First: Every pixel must promise adventure or safety.",
+      "Content is King: Images are the heroes; UI is the frame.",
+      "Zoom In: Use macro details for textures (sand, snow, skin).",
+      "Negative Space: Luxury = Space. Don't crowd the dream."
+    ],
+    "anti_patterns": [
+      "No generic 'Bootstrap' grids.",
+      "No 'Inter' for headings (Use Serif).",
+      "No full-screen gradients (Use texture/grain).",
+      "No 'Teal' for CTAs (Use Sunset Orange or Deep Ocean)."
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Playfair Display, serif",
+      "body": "DM Sans, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "usage": {
+      "h1": "text-5xl md:text-7xl font-bold tracking-tight leading-none font-serif",
+      "h2": "text-3xl md:text-5xl font-semibold tracking-tight font-serif",
+      "h3": "text-2xl font-medium font-serif",
+      "body": "text-base md:text-lg leading-relaxed text-muted-foreground",
+      "caption": "text-xs uppercase tracking-widest font-medium text-muted-foreground/80"
+    },
+    "installation": "Import fonts via Google Fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');"
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "name": "Deep Ocean",
+        "hex": "#0F766E",
+        "tailwind": "teal-700",
+        "usage": "Brand identity, active states, primary icons"
+      },
+      "secondary": {
+        "name": "Sandstone",
+        "hex": "#F5F5F4",
+        "tailwind": "stone-100",
+        "usage": "Page backgrounds, subtle panels"
+      },
+      "accent": {
+        "name": "Sunset Orange",
+        "hex": "#F97316",
+        "tailwind": "orange-500",
+        "usage": "CTAs (Book Now), Alerts, Highlights"
+      },
+      "neutral": {
+        "surface": "#FFFFFF",
+        "text_primary": "#1C1917",
+        "text_secondary": "#57534E",
+        "border": "#E7E5E4"
+      }
+    },
+    "theme_strategy": {
+      "public_pages": "Light Mode (Nature-inspired). Backgrounds: Stone-50/White. Text: Stone-900.",
+      "admin_dashboard": "Dense Light Mode or Dark Mode. High contrast. Backgrounds: White (clean) or Slate-950 (focus)."
+    }
+  },
+  "visual_enhancers": {
+    "radius": "rounded-xl",
+    "shadows": {
+      "card": "shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+      "floating": "shadow-[0_20px_50px_rgb(0,0,0,0.1)]",
+      "inner": "shadow-inner"
+    },
+    "textures": {
+      "grain": "Use a subtle SVG noise overlay on hero sections to kill digital flatness.",
+      "glass": "backdrop-blur-xl bg-white/70 border border-white/20 shadow-sm"
+    }
+  },
+  "layout_strategies": {
+    "public_marketing": {
+      "grid": "Mode A: The Tetris Grid. Asymmetric bento layouts for trip lists.",
+      "spacing": "Generous. py-24 or py-32 for sections.",
+      "container": "max-w-7xl mx-auto px-6 md:px-8"
+    },
+    "admin_dashboard": {
+      "grid": "Mode B: The Control Room. Dense, data-heavy, 4-column grid.",
+      "sidebar": "Fixed left sidebar (w-64), scrollable main content.",
+      "cards": "Flat, bordered, no shadow (border-border)."
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-orange-500 hover:bg-orange-600 text-white rounded-full px-8 py-6 font-medium transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20",
+      "secondary": "bg-white text-stone-900 border border-stone-200 hover:bg-stone-50 rounded-full px-6 py-6 font-medium",
+      "ghost": "hover:bg-stone-100 text-stone-600 hover:text-stone-900 rounded-lg px-4 py-2"
+    },
+    "cards": {
+      "trip_card": "group relative overflow-hidden rounded-2xl border-0 shadow-none hover:shadow-2xl transition-all duration-500",
+      "dashboard_stat": "p-6 rounded-xl border border-stone-200 bg-white flex flex-col gap-2"
+    },
+    "inputs": {
+      "style": "h-12 rounded-lg border-stone-200 focus:border-teal-600 focus:ring-teal-600/20 bg-stone-50/50"
+    }
+  },
+  "image_urls": {
+    "hero": {
+      "url": "https://images.unsplash.com/photo-1764706202040-a42f03f8fffa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxzY2VuaWMlMjBtb3VudGFpbiUyMGxhbmRzY2FwZSUyMHN1bnNldHxlbnwwfHx8fDE3NjYyNjQ4Nzl8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Dramatic pink clouds over snow-capped mountains",
+      "usage": "Home Page Hero Background"
+    },
+    "trips": [
+      {
+        "url": "https://images.unsplash.com/photo-1691849233457-837d8e2f9da3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGJlYWNoJTIwcmVzb3J0JTIwYWVyaWFsfGVufDB8fHx8MTc2NjI2NDg4Mnww&ixlib=rb-4.1.0&q=85",
+        "alt": "Ayada Maldives Resort",
+        "category": "Beach"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1643906858700-bb4e86ceae64?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjaXR5JTIwc3RyZWV0JTIwcGFyaXMlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzY2MjY0ODg0fDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Paris Eiffel Tower View",
+        "category": "City"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1631615230077-f5bd4e004fd5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGRpdmVyc2UlMjB0cmF2ZWxlcnMlMjBncm91cCUyMGhpa2luZ3xlbnwwfHx8fDE3NjYyNjQ4ODZ8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Group of women hiking",
+        "category": "Adventure"
+      }
+    ],
+    "community": {
+      "url": "https://images.unsplash.com/photo-1758599669009-5a9002c09487?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwyfHxoYXBweSUyMGRpdmVyc2UlMjB0cmF2ZWxlcnMlMjBncm91cCUyMGhpa2luZ3xlbnwwfHx8fDE3NjYyNjQ4ODZ8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Diverse group of friends in forest",
+      "usage": "About Us / Community Section"
+    }
+  },
+  "motion": {
+    "transitions": "transition-all duration-300 ease-out",
+    "hover_effects": "hover:-translate-y-1 hover:shadow-lg",
+    "page_load": "animate-in fade-in slide-in-from-bottom-4 duration-700"
+  },
+  "accessibility": {
+    "rules": [
+      "Ensure 4.5:1 contrast for text.",
+      "Use focus-visible:ring-2 for keyboard navigation.",
+      "All images must have alt text.",
+      "Interactive elements must have aria-labels if no text is present."
+    ]
+  },
+  "instructions_to_main_agent": {
+    "general": "You are building a high-end travel platform. Do not make it look like a generic admin template. Use the 'Playfair Display' font for all headings to give it a premium feel.",
+    "file_structure": "Use .js and .jsx extensions. The project is in /app/frontend.",
+    "styling": "Use Tailwind CSS for everything. Avoid custom CSS files unless for animations.",
+    "components": "Use the existing Shadcn components in /src/components/ui but override their default styles to match the 'Nature/Luxury' theme (more rounded, softer borders).",
+    "admin_dashboard": "For the admin dashboard, switch to a 'Control Room' aesthetic: denser grids, smaller text, high data density, but keep the font family consistent."
+  },
+  "universal_guidelines": {
+    "do_not": [
+      "Do not use 'Inter' for headings.",
+      "Do not use generic blue (#3B82F6) for primary actions.",
+      "Do not center text by default.",
+      "Do not use 'Lorem Ipsum' - use real travel-related copy."
+    ],
+    "must_do": [
+      "Use 'sonner' for toasts.",
+      "Use 'lucide-react' for icons.",
+      "Add 'data-testid' to all interactive elements.",
+      "Ensure mobile responsiveness for all pages."
+    ]
+  }
+}

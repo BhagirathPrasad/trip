@@ -70,9 +70,9 @@ const ManageBookings = () => {
         <div className="space-y-4" data-testid="bookings-list">
           {bookings.map((booking) => (
             <Card
-              key={booking.id}
+              key={booking._id || booking.id}
               className="p-6 border border-stone-200"
-              data-testid={`booking-item-${booking.id}`}
+              data-testid={`booking-item-${booking._id || booking.id}`}
             >
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                 <div className="flex-1">
@@ -105,7 +105,7 @@ const ManageBookings = () => {
                 <div className="flex items-center gap-3">
                   <Select
                     value={booking.status}
-                    onValueChange={(value) => handleStatusUpdate(booking.id, value)}
+                    onValueChange={(value) => handleStatusUpdate(booking._id || booking.id, value)}
                   >
                     <SelectTrigger className="w-40" data-testid="booking-status-select">
                       <SelectValue />

@@ -51,7 +51,7 @@ const TripDetails = () => {
     setBookingLoading(true);
     try {
       await bookingAPI.create({
-        trip_id: trip.id,
+        trip_id: trip._id || trip.id,
         travel_date: travelDate,
         travelers: parseInt(travelers),
       });

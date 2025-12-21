@@ -33,6 +33,7 @@ export const bookingAPI = {
 export const contactAPI = {
   submit: (data) => api.post('/contact', data),
   getAll: () => api.get('/contact'),
+  getMy: () => api.get('/contact/my'),
   reply: (id, reply) => api.patch(`/contact/${id}/reply`, { reply }),
 };
 

@@ -44,7 +44,7 @@ const ContactMessages = () => {
     }
 
     try {
-      await contactAPI.reply(selectedContact.id, replyText);
+      await contactAPI.reply(selectedContact._id || selectedContact.id, replyText);
       toast.success('Reply sent successfully!');
       setReplyDialogOpen(false);
       setReplyText('');
@@ -74,9 +74,9 @@ const ContactMessages = () => {
         <div className="space-y-4" data-testid="messages-list">
           {contacts.map((contact) => (
             <Card
-              key={contact.id}
+              key={contact._id || contact.id}
               className="p-6 border border-stone-200"
-              data-testid={`contact-item-${contact.id}`}
+              data-testid={`contact-item-${contact._id || contact.id}`}
             >
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                 <div className="flex-1">

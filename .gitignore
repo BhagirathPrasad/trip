@@ -78,3 +78,18 @@ agenthub/agents/youtube/db
 
 # Mobile development
 android-sdk/ 
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+
+# Build outputs
+/frontend/build/
+/backend-node/dist/
+
+# OneDrive artifacts
+~$*

@@ -10,8 +10,8 @@ export const TripCard = ({ trip }) => {
   return (
     <Card
       className="group relative overflow-hidden rounded-2xl border-0 shadow-none hover:shadow-2xl transition-all duration-500 cursor-pointer"
-      onClick={() => navigate(`/trips/${trip.id}`)}
-      data-testid={`trip-card-${trip.id}`}
+      onClick={() => navigate(`/trips/${trip._id || trip.id}`)}
+      data-testid={`trip-card-${trip._id || trip.id}`}
     >
       <div className="relative h-64 overflow-hidden">
         <img
@@ -46,7 +46,7 @@ export const TripCard = ({ trip }) => {
           <Button
             onClick={(e) => {
               e.stopPropagation();
-              navigate(`/trips/${trip.id}`);
+              navigate(`/trips/${trip._id || trip.id}`);
             }}
             className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6 transition-transform hover:scale-105"
             data-testid="trip-card-view-details"

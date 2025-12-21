@@ -78,7 +78,7 @@ const Trips = () => {
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-testid="trips-grid">
             {filteredTrips.map((trip) => (
-              <TripCard key={trip.id} trip={trip} />
+              <TripCard key={trip._id || trip.id} trip={trip} />
             ))}
           </div>
         )}

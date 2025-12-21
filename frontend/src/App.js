@@ -17,6 +17,7 @@ import AdminDashboard from './pages/admin/AdminDashboard';
 import ManageTrips from './pages/admin/ManageTrips';
 import ManageBookings from './pages/admin/ManageBookings';
 import ContactMessages from './pages/admin/ContactMessages';
+import ChatWidget from './components/ChatWidget';
 import '@/index.css';
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
           <Toaster position="top-center" richColors />
+          <ChatWidget />
         </div>
       </BrowserRouter>
     </AuthProvider>

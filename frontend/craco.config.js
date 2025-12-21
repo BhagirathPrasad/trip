@@ -9,7 +9,7 @@ const isDevServer = process.env.NODE_ENV !== "production";
 // Environment variable overrides
 const config = {
   enableHealthCheck: process.env.ENABLE_HEALTH_CHECK === "true",
-  enableVisualEdits: isDevServer, // Only enable during dev server
+  enableVisualEdits: process.env.ENABLE_VISUAL_EDITS === "true" && isDevServer, // Only enable if explicitly enabled in env
 };
 
 // Conditionally load visual edits modules only in dev mode
@@ -17,8 +17,13 @@ let setupDevServer;
 let babelMetadataPlugin;
 
 if (config.enableVisualEdits) {
-  setupDevServer = require("./plugins/visual-edits/dev-server-setup");
-  babelMetadataPlugin = require("./plugins/visual-edits/babel-metadata-plugin");
+  try {
+    setupDevServer = require("./plugins/visual-edits/dev-server-setup");
+    babelMetadataPlugin = require("./plugins/visual-edits/babel-metadata-plugin");
+  } catch (e) {
+    console.warn("visual edits plugins not found, disabling visual edits");
+    config.enableVisualEdits = false;
+  }
 }
 
 // Conditionally load health check modules only if enabled

@@ -66,9 +66,9 @@ const MyBookings = () => {
           <div className="space-y-6" data-testid="my-bookings-list">
             {bookings.map((booking) => (
               <Card
-                key={booking.id}
+                key={booking._id || booking.id}
                 className="p-6 border border-stone-200 hover:shadow-lg transition-shadow"
-                data-testid={`booking-card-${booking.id}`}
+                data-testid={`booking-card-${booking._id || booking.id}`}
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div className="flex-1">
